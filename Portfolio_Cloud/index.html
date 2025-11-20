@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Neural Network Background -->
+    <div class="neural-background">
+        <canvas id="neuralCanvas"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">My Portfolio</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" data-text="Home"><span>Home</span></a></li>
+                <li><a href="#about" data-text="About"><span>About</span></a></li>
+                <li><a href="#experience" data-text="Experience"><span>Experience</span></a></li>
+                <li><a href="#skills" data-text="Skills"><span>Skills</span></a></li>
+                <li><a href="#projects" data-text="Projects"><span>Projects</span></a></li>
+                <li><a href="#certifications" data-text="Certifications"><span>Certifications</span></a></li>
+                <li><a href="#contact" class="contact-nav-button" data-text="Contact →"><span>Contact →</span></a></li>
+            </ul>
+            <div class="mobile-menu-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="earth-container">
+            <div class="nebula-orb orb-1"></div>
+            <div class="nebula-orb orb-2"></div>
+            <div class="nebula-orb orb-3"></div>
+            <canvas id="particleNebula"></canvas>
+        </div>
+        <div class="hero-content">
+            <h1>
+                Bhanudas Mahadik<br>
+            </h1>
+            <p class="hero-subtitle">
+                AWS Certified Solutions Architect designing secure, reliable, and cost-optimized cloud architectures. 
+                Specializing in infrastructure automation and modern DevOps practices.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="primary-button">View My Work →</a>
+                <a href="https://www.linkedin.com/in/bhanudas-mahadik/" target="_blank" class="secondary-button">Connect on LinkedIn →</a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header reveal">
+            <div class="section-label">About Me</div>
+            <h2 class="section-title">Passionate About Cloud Innovation</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <h3>Building the Future of Cloud Computing</h3>
+                <p>
+                    I'm Bhanudas Mahadik, a sophomore IT student at the University of Cincinnati with a strong focus on 
+                    cloud computing and infrastructure automation. As an AWS Certified Solutions Architect - Associate 
+                    and Cloud Practitioner, I specialize in designing scalable, secure, and cost-effective cloud solutions.
+                </p>
+                <p>
+                    My journey in tech combines hands-on experience in networking and system administration with a passion 
+                    for building innovative cloud architectures. From troubleshooting enterprise networks to deploying 
+                    containerized applications on Kubernetes, I thrive on solving complex technical challenges.
+                </p>
+                <p>
+                    Currently, I'm exploring cutting-edge technologies like Infrastructure as Code (Terraform), serverless 
+                    architectures, and AI-driven automation to create next-generation cloud solutions.
+                </p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card reveal">
+                    <div class="stat-number">x 2</div>
+                    <div class="stat-label">AWS Certifications</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-number">x 10</div>
+                    <div class="stat-label">Cloud Projects</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-number">1 +</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-number">x 2</div>
+                    <div class="stat-label">Hackathon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="section-header reveal">
+            <div class="section-label">Professional Journey</div>
+            <h2 class="section-title">Experience & Growth</h2>
+        </div>
+        <div class="experience-timeline">
+            <div class="experience-item reveal">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>IT Support Specialist</h3>
+                        <div class="experience-company">University of Cincinnati</div>
+                    </div>
+                    <div class="experience-date">2023 - Present</div>
+                </div>
+                <p class="experience-description">
+                    Providing comprehensive technical support for enterprise systems, managing network infrastructure, 
+                    and implementing cloud-based solutions to enhance operational efficiency.
+                </p>
+                <ul class="experience-highlights">
+                    <li>Troubleshooting complex hardware, software, and networking issues for 500+ users</li>
+                    <li>Managing Active Directory, user provisioning, and access control systems</li>
+                    <li>Implementing automated monitoring solutions using CloudWatch and Lambda</li>
+                    <li>Documenting technical procedures and maintaining IT infrastructure</li>
+                </ul>
+            </div>
+
+            <div class="experience-item reveal">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Network Infrastructure Project</h3>
+                        <div class="experience-company">Alma College</div>
+                    </div>
+                    <div class="experience-date">2024</div>
+                </div>
+                <p class="experience-description">
+                    Led a comprehensive campus-wide network upgrade project, replacing and configuring enterprise-grade 
+                    wireless access points to improve connectivity and performance.
+                </p>
+                <ul class="experience-highlights">
+                    <li>Replaced and configured 100+ Aruba wireless access points across campus</li>
+                    <li>Improved network coverage and bandwidth by 40% for all campus buildings</li>
+                    <li>Implemented VLAN segmentation for enhanced security and traffic management</li>
+                    <li>Collaborated with IT teams to ensure minimal disruption during deployment</li>
+                </ul>
+            </div>
+
+            <div class="experience-item reveal">
+                <div class="experience-header">
+                    <div class="experience-title">
+                        <h3>Technical Support Specialist</h3>
+                        <div class="experience-company">Previous Roles</div>
+                    </div>
+                    <div class="experience-date">2022 - 2023</div>
+                </div>
+                <p class="experience-description">
+                    Gained foundational experience in IT support, customer service, and problem-solving while 
+                    developing technical skills in system administration and network troubleshooting.
+                </p>
+                <ul class="experience-highlights">
+                    <li>Resolved 200+ technical support tickets with 95% customer satisfaction</li>
+                    <li>Maintained IT equipment inventory and performed routine system maintenance</li>
+                    <li>Created user guides and training materials for common technical issues</li>
+                    <li>Developed strong communication skills working with diverse user groups</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header reveal">
+            <div class="section-label">Technical Expertise</div>
+            <h2 class="section-title">Skills & Technologies</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <div class="skill-icon-large">
+                    <img src="images/skills/aws.png" alt="AWS">
+                </div>
+                <h4>AWS</h4>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon-large">
+                    <img src="images/skills/ec2.png" alt="EC2">
+                </div>
+                <h4>EC2</h4>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon-large">
+                    <img src="images/skills/s3.png" alt="S3">
+                </div>
+                <h4>S3</h4>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon-large">
+                    <img src="images/skills/lambda.png" alt="Lambda">
+                </div>
+                <h4>Lambda</h4>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon-large">
+                    <img src="images/skills/rds.png" alt="RDS">
+                </div>
+                <h4>RDS</h4>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon-large">
+                    <img src="images/skills/terraform.png" alt="Terraform">
+                </div>
+                <h4>Terraform</h4>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon-large">
+                    <img src="images/skills/docker.png" alt="Docker">
+                </div>
+                <h4>Docker</h4>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon-large">
+                    <img src="images/skills/kubernetes.png" alt="Kubernetes">
+                </div>
+                <h4>Kubernetes</h4>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon-large">
+                    <img src="images/skills/python.png" alt="Python">
+                </div>
+                <h4>Python</h4>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon-large">
+                    <img src="images/skills/bash.png" alt="Bash">
+                </div>
+                <h4>Bash</h4>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon-large">
+                    <img src="images/skills/git.png" alt="Git">
+                </div>
+                <h4>Git</h4>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-icon-large">
+                    <img src="images/skills/cicd.png" alt="CI/CD">
+                </div>
+                <h4>CI/CD</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-header reveal">
+            <div class="section-label">Portfolio</div>
+            <h2 class="section-title">Featured Cloud Projects</h2>
+            <p class="section-description">
+                Exploring cutting-edge AWS technologies through hands-on projects focused on scalability, 
+                security, and automation.
+            </p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <div class="project-visual">
+                    <!-- <img src="path/to/your/diagram.png" alt="Project Diagram"> -->
+                    ☁️
+                </div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="project-tag">Terraform</span>
+                        <span class="project-tag">EC2</span>
+                        <span class="project-tag">VPC</span>
+                    </div>
+                    <h3>Multi-Tier Web Application</h3>
+                    <p>
+                        Designed and deployed a highly available, auto-scaling web application infrastructure using
+                        Terraform for IaC, featuring load balancing, RDS database, and CloudFront CDN.
+                    </p>
+                    <a href="https://www.linkedin.com/in/bhanudas-mahadik/" target="_blank" class="project-button">View Details</a>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-visual">
+                    <!-- <img src="path/to/your/diagram.png" alt="Project Diagram"> -->
+                    🚀
+                </div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="project-tag">Kubernetes</span>
+                        <span class="project-tag">Docker</span>
+                        <span class="project-tag">EKS</span>
+                    </div>
+                    <h3>Containerized Microservices</h3>
+                    <p>
+                        Built a production-ready Kubernetes cluster on EKS with automated CI/CD pipeline,
+                        implementing service mesh for enhanced security and observability.
+                    </p>
+                    <a href="https://www.linkedin.com/in/bhanudas-mahadik/" target="_blank" class="project-button">View Details</a>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-visual">
+                    <!-- <img src="path/to/your/diagram.png" alt="Project Diagram"> -->
+                    🤖
+                </div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="project-tag">Lambda</span>
+                        <span class="project-tag">API Gateway</span>
+                        <span class="project-tag">DynamoDB</span>
+                    </div>
+                    <h3>Serverless Data Pipeline</h3>
+                    <p>
+                        Created an event-driven serverless architecture for real-time data processing using
+                        Lambda, SQS, and DynamoDB with automated scaling and cost optimization.
+                    </p>
+                    <a href="https://www.linkedin.com/in/bhanudas-mahadik/" target="_blank" class="project-button">View Details</a>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-visual">
+                    <!-- <img src="path/to/your/diagram.png" alt="Project Diagram"> -->
+                    🔒
+                </div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="project-tag">Security</span>
+                        <span class="project-tag">IAM</span>
+                        <span class="project-tag">KMS</span>
+                    </div>
+                    <h3>Zero-Trust Security Framework</h3>
+                    <p>
+                        Implemented comprehensive security architecture with IAM policies, encryption at rest/transit,
+                        WAF rules, and automated compliance monitoring using AWS Config.
+                    </p>
+                    <a href="https://www.linkedin.com/in/bhanudas-mahadik/" target="_blank" class="project-button">View Details</a>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-visual">
+                    <!-- <img src="path/to/your/diagram.png" alt="Project Diagram"> -->
+                    📊
+                </div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="project-tag">CloudWatch</span>
+                        <span class="project-tag">SNS</span>
+                        <span class="project-tag">Grafana</span>
+                    </div>
+                    <h3>Infrastructure Monitoring System</h3>
+                    <p>
+                        Developed comprehensive monitoring and alerting solution with custom CloudWatch dashboards,
+                        automated incident response, and integration with Slack notifications.
+                    </p>
+                    <a href="https://www.linkedin.com/in/bhanudas-mahadik/" target="_blank" class="project-button">View Details</a>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-visual">
+                    <!-- <img src="path/to/your/diagram.png" alt="Project Diagram"> -->
+                    💾
+                </div>
+                <div class="project-content">
+                    <div class="project-tags">
+                        <span class="project-tag">S3</span>
+                        <span class="project-tag">Backup</span>
+                        <span class="project-tag">Glacier</span>
+                    </div>
+                    <h3>Disaster Recovery Solution</h3>
+                    <p>
+                        Architected enterprise-grade backup and disaster recovery system with automated snapshots,
+                        cross-region replication, and defined RTO/RPO objectives.
+                    </p>
+                    <a href="https://www.linkedin.com/in/bhanudas-mahadik/" target="_blank" class="project-button">View Details</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="section-header reveal">
+            <div class="section-label">Certifications</div>
+            <h2 class="section-title">Professional Credentials</h2>
+        </div>
+        <div class="certs-grid">
+            <div class="cert-card reveal">
+                <div class="cert-icon">🏆</div>
+                <h3>AWS Solutions Architect</h3>
+                <div class="cert-issuer">Amazon Web Services</div>
+                <p class="cert-date">Associate • 2024</p>
+                <a href="https://www.linkedin.com/in/bhanudas-mahadik/" target="_blank" class="cert-button">View Certificate</a>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-icon">☁️</div>
+                <h3>AWS Cloud Practitioner</h3>
+                <div class="cert-issuer">Amazon Web Services</div>
+                <p class="cert-date">Foundational • 2024</p>
+                <a href="https://www.linkedin.com/in/bhanudas-mahadik/" target="_blank" class="cert-button">View Certificate</a>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-icon">📚</div>
+                <h3>Pursuing: CKA</h3>
+                <div class="cert-issuer">Cloud Native Computing Foundation</div>
+                <p class="cert-date">In Progress</p>
+                <a href="https://www.linkedin.com/in/bhanudas-mahadik/" target="_blank" class="cert-button">Learn More</a>
+            </div>
+
+            <div class="cert-card reveal">
+                <div class="cert-icon">🔧</div>
+                <h3>Pursuing: Terraform</h3>
+                <div class="cert-issuer">HashiCorp</div>
+                <p class="cert-date">Planned 2025</p>
+                <a href="https://www.linkedin.com/in/bhanudas-mahadik/" target="_blank" class="cert-button">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header reveal">
+            <div class="section-label">Get In Touch</div>
+            <h2 class="section-title">Let's Build Something Amazing</h2>
+            <p class="section-description">
+                Ready to collaborate on cloud projects? I'm available for consulting, freelance work, and exciting opportunities.
+            </p>
+        </div>
+
+        <div class="contact-wrapper">
+            <!-- Left Side: Profile & Contact Info -->
+            <div class="contact-info-section reveal">
+                <div class="profile-card">
+                    <div class="profile-image-container">
+                        <img src="images/profile.jpg" alt="Bhanudas Mahadik" class="profile-image">
+                        <div class="profile-glow"></div>
+                    </div>
+                    <h3>Bhanudas Mahadik</h3>
+                    <p class="profile-role">AWS Solutions Architect</p>
+                </div>
+
+                <div class="contact-methods">
+                    <a href="mailto:bhanudasmahadikijs@gmail.com" class="contact-method-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">bhanudasmahadikijs@gmail.com</span>
+                        </div>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/bhanudas-mahadik/" target="_blank" class="contact-method-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">bhanudas-mahadik</span>
+                        </div>
+                    </a>
+
+                    <div class="contact-method-card phone-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <span class="contact-label">Phone</span>
+                            <span class="contact-value">+1 (234) 567-890</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Contact Form -->
+            <div class="contact-form-section reveal">
+                <div class="form-card">
+                    <h3>Send me a message</h3>
+                    <p class="form-description">Fill out the form below and I'll get back to you within 24 hours.</p>
+
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Collaboration" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project..." rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="primary-button submit-button">
+                            <span>Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Socials Section - Centered Below -->
+        <div class="socials-section-centered reveal">
+            <h4 class="socials-title">Connect on Socials</h4>
+            <div class="social-icons">
+                <a href="https://github.com/yourgithub" target="_blank" class="social-icon-card" title="GitHub">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/yourusername/" target="_blank" class="social-icon-card" title="Instagram">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://www.codedex.io/@yourusername" target="_blank" class="social-icon-card" title="Codedex">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M7 7h10v2H7V7zm0 4h10v2H7v-2zm0 4h7v2H7v-2zM3 3h18a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm0 2v14h18V5H3z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>©2025 Bhanudas Mahadik. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
