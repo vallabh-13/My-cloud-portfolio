@@ -260,6 +260,27 @@
         window.addEventListener('scroll', checkReveal);
         checkReveal();
 
+        // Hide earth horizon when scrolling past hero section
+        const earthContainer = document.querySelector('.earth-container');
+        const heroSection = document.querySelector('.hero');
+
+        function checkEarthVisibility() {
+            if (heroSection && earthContainer) {
+                const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+                const scrollPosition = window.scrollY;
+
+                if (scrollPosition > heroBottom - window.innerHeight) {
+                    earthContainer.style.opacity = '0';
+                    earthContainer.style.pointerEvents = 'none';
+                } else {
+                    earthContainer.style.opacity = '1';
+                }
+            }
+        }
+
+        window.addEventListener('scroll', checkEarthVisibility);
+        checkEarthVisibility();
+
         // Contact form
         const contactForm = document.getElementById('contactForm');
         contactForm.addEventListener('submit', (e) => {
