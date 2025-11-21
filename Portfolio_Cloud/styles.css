@@ -493,7 +493,7 @@
         .hero-subtitle {
             font-size: clamp(1rem, 2vw, 1.2rem);
             color: var(--text-secondary);
-            max-width: 650px;
+            max-width: 850px;
             margin: 0 auto 3rem;
             line-height: 1.8;
             font-weight: 300;
@@ -723,7 +723,7 @@
 
         .section-header {
             text-align: center;
-            margin-bottom: 6rem;
+            margin-bottom: 7rem;
         }
 
         .section-label {
@@ -737,7 +737,7 @@
 
         .section-title {
             font-family: 'Instrument Serif', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2.5rem, 2vw, 4rem);
             font-weight: 400;
             margin-bottom: 1.5rem;
             letter-spacing: -1px;
