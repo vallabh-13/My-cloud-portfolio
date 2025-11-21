@@ -1228,19 +1228,20 @@
         /* Contact Section */
         #contact {
             position: relative;
-            overflow: hidden;
+            overflow-y: clip;
+            overflow-x: visible;
         }
 
         .contact-earth-container {
             position: absolute;
             top: 0;
             left: 50%;
-            transform: translateX(-50%);
             width: 100vw;
             height: 100%;
             z-index: 0;
             pointer-events: none;
             overflow: visible;
+            margin-left: -50vw;
         }
 
         /* Contact Earth Horizon - Flipped Upward */
@@ -1732,10 +1733,11 @@
         /* Footer */
         footer {
             position: relative;
-            z-index: 10;
+            z-index: 1;
             border-top: 1px solid rgba(124, 58, 237, 0.1);
             padding: 1rem 1rem;
             text-align: center;
+            background: transparent;
         }
 
         .footer-content p {
@@ -1802,7 +1804,7 @@
             .experience-item:nth-child(even) {
                 left: 50%; /* Also start at the center line */
                 transform: translateX(calc(-100% - var(--timeline-spacing))); /* Shift left by its own width plus the spacing */
-                text-align: right;
+                text-align: left;
                 padding-left: 2.5rem; /* Internal padding for content */
                 padding-right: 2.5rem; /* Internal padding for content */
             }
@@ -1845,9 +1847,9 @@
                 left: auto;
             }
             .experience-item:nth-child(even)::after {
-                right: calc(-1 * var(--timeline-spacing)); 
-                width: var(--timeline-spacing); 
-                left: auto; 
+                left: calc(-1 * var(--timeline-spacing));
+                width: var(--timeline-spacing);
+                right: auto;
             }
             
             /* Hover effect: move away from the timeline */
@@ -1861,18 +1863,22 @@
 
             /* Align headers on left-side items */
             .experience-item:nth-child(even) .experience-header {
-                flex-direction: row-reverse;
+                flex-direction: row;
             }
 
             /* Adjust highlight list alignment for left-side items */
-            .experience-item:nth-child(even) .experience-highlights li::before {
-                right: 0;
-                left: auto;
+            .experience-item:nth-child(even) .experience-highlights {
+                text-align: left;
             }
 
             .experience-item:nth-child(even) .experience-highlights li {
-                padding-left: 0;
-                padding-right: 2rem;
+                padding-left: 2rem;
+                padding-right: 0;
+            }
+
+            .experience-item:nth-child(even) .experience-highlights li::before {
+                left: 0;
+                right: auto;
             }
         }
         

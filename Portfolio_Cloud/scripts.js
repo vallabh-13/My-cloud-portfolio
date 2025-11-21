@@ -281,10 +281,29 @@
         window.addEventListener('scroll', checkEarthVisibility);
         checkEarthVisibility();
 
-        // Contact form
+        // Contact form with AJAX submission
         const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            alert('Thank you for your message! I\'ll get back to you soon.');
-            contactForm.reset();
+
+            const formData = new FormData(contactForm);
+
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    alert('Thank you for your message! I\'ll get back to you soon.');
+                    contactForm.reset();
+                } else {
+                    alert('Oops! There was a problem submitting your form. Please try again.');
+                }
+            } catch (error) {
+                alert('Oops! There was a problem submitting your form. Please try again.');
+            }
         });

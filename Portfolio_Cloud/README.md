@@ -254,3 +254,7 @@ This portfolio is a personal project. Feel free to use it as inspiration, but pl
 ---
 
 **Note**: This is a premium portfolio design worth $10,000+ in professional value. It showcases modern web development practices, smooth animations, and professional design principles suitable for senior-level cloud architects and DevOps engineers.
+<p class="experience-description">
+                    Built a comprehensive web security analysis platform using AWS Lambda, integrating industry-standard security tools
+                    into a unified serverless application. Democratized web security testing by creating a one-click solution for vulnerability scanning.
+                </p>
