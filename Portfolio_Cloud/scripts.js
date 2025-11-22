@@ -281,6 +281,54 @@
         window.addEventListener('scroll', checkEarthVisibility);
         checkEarthVisibility();
 
+        // Custom notification function
+        function showNotification(title, message, type = 'success') {
+            const notification = document.getElementById('notificationToast');
+            const titleElement = notification.querySelector('.notification-title');
+            const messageElement = notification.querySelector('.notification-message');
+            const iconElement = notification.querySelector('.notification-icon svg');
+
+            // Set content
+            titleElement.textContent = title;
+            messageElement.textContent = message;
+
+            // Set icon based on type
+            if (type === 'success') {
+                notification.classList.remove('error');
+                iconElement.innerHTML = `
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                `;
+            } else if (type === 'error') {
+                notification.classList.add('error');
+                iconElement.innerHTML = `
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                `;
+            }
+
+            // Show notification
+            notification.classList.remove('hide');
+            notification.classList.add('show');
+
+            // Auto hide after 5 seconds
+            setTimeout(() => {
+                closeNotification();
+            }, 5000);
+        }
+
+        function closeNotification() {
+            const notification = document.getElementById('notificationToast');
+            notification.classList.remove('show');
+            notification.classList.add('hide');
+
+            // Reset after animation
+            setTimeout(() => {
+                notification.classList.remove('hide');
+            }, 400);
+        }
+
         // Contact form with AJAX submission
         const contactForm = document.getElementById('contactForm');
         contactForm.addEventListener('submit', async (e) => {
@@ -298,12 +346,24 @@
                 });
 
                 if (response.ok) {
-                    alert('Thank you for your message! I\'ll get back to you soon.');
+                    showNotification(
+                        'Message Sent Successfully!',
+                        "Thank you for reaching out! I'll get back to you within 24-48 hours.",
+                        'success'
+                    );
                     contactForm.reset();
                 } else {
-                    alert('Oops! There was a problem submitting your form. Please try again.');
+                    showNotification(
+                        'Submission Failed',
+                        'There was a problem submitting your form. Please try again or email me directly.',
+                        'error'
+                    );
                 }
             } catch (error) {
-                alert('Oops! There was a problem submitting your form. Please try again.');
+                showNotification(
+                    'Network Error',
+                    'Could not connect to the server. Please check your internet connection and try again.',
+                    'error'
+                );
             }
         });
