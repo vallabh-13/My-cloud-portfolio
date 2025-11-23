@@ -504,9 +504,19 @@
             display: flex;
             gap: 1.5rem;
             justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
             position: relative;
             z-index: 100;
+        }
+
+        /* Default: show full text, hide short text */
+        .short-text {
+            display: none;
+        }
+
+        .full-text {
+            display: inline;
         }
 
         .primary-button {
@@ -2197,16 +2207,29 @@
             }
 
             .hero-buttons {
-                flex-direction: column;
+                flex-direction: row;
                 width: 100%;
                 gap: 1rem;
+                align-items: center;
+            }
+
+            /* Mobile: show short text, hide full text */
+            .full-text {
+                display: none;
+            }
+
+            .short-text {
+                display: inline;
             }
 
             .primary-button,
             .secondary-button {
-                width: 100%;
+                flex: 1;
                 text-align: center;
-                padding: 0.6rem 1.5rem;
+                padding: 0.6rem 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             .stats-grid {
