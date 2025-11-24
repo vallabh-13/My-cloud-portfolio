@@ -754,6 +754,20 @@
             letter-spacing: -1px;
         }
 
+        /* Credentials wrapping fix */
+        .credentials-title {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .credential-item {
+            white-space: nowrap;
+            display: inline-block;
+        }
+
         .section-description {
             font-size: 1.15rem;
             color: var(--text-secondary);
@@ -2278,6 +2292,12 @@
                 font-size: clamp(1.8rem, 5vw, 2.5rem);
             }
 
+            /* Responsive credentials on tablet */
+            .credentials-title {
+                gap: 0.4rem;
+                font-size: clamp(1.5rem, 4.5vw, 2.2rem);
+            }
+
             .section-header {
                 margin-bottom: 4rem;
             }
@@ -2324,6 +2344,12 @@
 
             .section-title {
                 font-size: clamp(1.5rem, 6vw, 2rem);
+            }
+
+            /* Responsive credentials on mobile */
+            .credentials-title {
+                gap: 0.3rem;
+                font-size: clamp(1.2rem, 5vw, 1.8rem);
             }
 
             .hero-subtitle {
